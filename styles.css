@@ -1,6 +1,6 @@
 body
 {
-    padding: 0;
+    padding: 0 2.5rem;
     margin: 0;
     font-size : 16px;
     font-family: 'Kumbh Sans', sans-serif;
@@ -16,20 +16,30 @@ body
     justify-content: center;
     border-style: none none ridge none;
     flex-wrap: wrap;
-    padding: 0.5em;
     padding-bottom: 1.4em;
     margin: 1em;
 }
+.menuBtn
+{
+    display: none;
+    flex-grow: 0.3;
+    padding: auto;
+}
+.menuBtn button{
+    background-color: white;
+    border: 0 white;
+}
 .logo
 {
-    width: 15%;
+    /* width: 15%; */
+    flex-grow: 2;
     min-width: 138px;
 }
 .list_item
 {
-    width: 65%;
+    /* width: 65%; */
     display: flex;
-    
+    flex-grow: 8;
 }
 .hd_list
 {
@@ -49,7 +59,8 @@ body
 {
     /* margin-left: 32rem;
     position: relative; */
-    width: 20%;
+    /* width: 20%; */
+    flex-grow: 0.5;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -63,36 +74,72 @@ body
 
 .usr_cart
 {
-    display:none;
+    display: none;
     position: absolute;
-    box-shadow: 1px 1px 1px 1px rgba(129, 115, 115, 0.5);
+    /* box-shadow: 1px 1px 1px 1px rgba(171, 154, 154, 0.5); */
     background-color: white;
     right: 0.5em;
     width: 15em;
+    top: 4rem;
+    right: 2rem;
+    border-radius: 3%;
+    padding: 1rem;
+    box-shadow: 0 1rem 2rem rgb(139, 133, 133);
+}
 
+.usr_cart h4 
+{
+    font-weight: 700;
+    font: bolder;
+}
+.usr_cart div{
+    border-top: 1px solid;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.usr_cart div h4{
+    margin: 0;
+    font-weight: 400;
+}
+/* Responsive Design */
+
+@media screen and (max-width: 420px)
+{
+    body{
+        padding: 0;
+    }
+}
+
+/* Main Body */
+
+.mainBody{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
 }
 
 /* Responsive Design */
 
-@media screen and (max-width: 1000px) {
-       .list_item
-       {
-           width: 60%;
-       }
-       .logo
-       {
-           width: 20%;
-       }
-}
-@media screen and (max-width: 1000px) {
-    .list_item
-    {
-        width: 55%;
-    }
-    .logo
-    {
-        width: 20%;
+@media screen and (max-width: 420px)
+{
+    .mainBody{
+        flex-direction: column;
+        padding: 0;
     }
 }
 
+/* Main Body : Left */
 
+.mainBL
+{
+    display: flex;
+    flex-grow: 6;
+}
+
+/* Main Body : Right */
+
+.mainBR{
+    flex-grow: 6;
+}

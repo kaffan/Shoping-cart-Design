@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -19,6 +19,9 @@
 </head>
 <body>
   <header id="head">
+    <div class="menuBtn">
+      <Button><img src="./images/icon-menu.svg" alt=""></Button>
+    </div>
     <div class="logo">
       <img src="./images/logo.svg">
     </div>
@@ -42,10 +45,29 @@
       </div>
     </div>
   </header>
-  
+  <section class="mainBody">
+    <aside class="mainBL">
+      <section class="bigImg">
+        <div><img src="./images/image-product-1.jpg" alt="product-1"></div>
+      </section>
+      <section class="smallImgs">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </aside>
+    <aside class="mainBR">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </aside>
+  </section>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
