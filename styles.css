@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;700&display=swap');
 body
 {
     padding: 0 2.5rem;
@@ -105,7 +106,7 @@ body
 }
 /* Responsive Design */
 
-@media screen and (max-width: 420px)
+@media screen and (max-width: 570px)
 {
     body{
         padding: 0;
@@ -117,12 +118,17 @@ body
 .mainBody{
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
     padding: 1rem;
+    width: 90%;
+    margin: 3rem auto 0;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 /* Responsive Design */
 
-@media screen and (max-width: 420px)
+@media screen and (max-width: 570px)
 {
     .mainBody{
         flex-direction: column;
@@ -135,11 +141,99 @@ body
 .mainBL
 {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
     flex-grow: 6;
 }
+.bigImg{
+    padding: 1rem;
+    width: 80%;
+}
 
+.bigImg{
+    display: flex;
+    justify-content: center;
+}
+.bigImg div img{
+    height: 33vw;
+    width: 33vw;
+    margin: auto;
+    border-radius: 7%;
+}
+
+.smallImgs
+{
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.smallImgs img{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 7%;
+}
 /* Main Body : Right */
 
 .mainBR{
+    display: flex;
+    padding: 4.5vw; /* 6rem */
+    justify-items: center;
+    flex-direction: column;
     flex-grow: 6;
+}
+
+.BRHead h4{
+    font-size: 12pt;
+    font-weight: 600;
+    color: hsl(26, 100%, 55%);
+    margin: 1rem 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.BRHead h1{
+    font-size: 32pt;
+    margin: 1rem 0;
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.BRMain p{
+    font-weight: 400;
+    line-height: 1.7;
+    color: hsla(183, 100%, 14%, 0.904);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.pricing{
+    display: flex;
+    margin: 1rem 0 1.5rem;
+    height: 5vw;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.pricing #p1{
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+.pricing #p1 #p11{
+    font-size: 20pt;
+    font-weight: 700;
+    flex-grow: 1;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.pricing #p1 #p12{
+    flex-grow: 0.5;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.1rem;
+    color:  hsl(25, 88%, 41%);
+    background-color: rgb(222, 212, 212);
+}
+
+.pricing #p2{
+    color: hsla(183, 100%, 14%, 0.904);    
 }
