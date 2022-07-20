@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;700&display=swap');
+html, body{
+    min-height: 100%;
+    height: auto;
+}
+
 body
 {
     padding: 0 2.5rem;
@@ -15,6 +20,7 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-color: rgb(255, 255, 255);
     border-style: none none ridge none;
     flex-wrap: wrap;
     padding-bottom: 1.4em;
@@ -85,7 +91,7 @@ body
     right: 2rem;
     border-radius: 3%;
     padding: 1rem;
-    box-shadow: 0 1rem 2rem rgb(139, 133, 133);
+    box-shadow: 0 1rem 2rem rgb(191, 181, 181);
 }
 
 .usr_cart h4 
@@ -103,6 +109,39 @@ body
 .usr_cart div h4{
     margin: 0;
     font-weight: 400;
+}
+
+#mobileMenu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 95vw;
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.7));
+    /* backdrop-filter: drop-shadow(8px 8px 10px black);  */
+}
+.backdrop{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    padding: 1.5rem;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    text-align: left;
+    /* backdrop-filter: blur(5px); */
+    background-color: white;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+#close{
+    flex-grow: 0.21;
+}
+#mobMenuList{
+    flex-grow: 2;
 }
 /* Responsive Design */
 
@@ -231,7 +270,7 @@ body
     text-align: center;
     padding: 0.1rem;
     color:  hsl(25, 88%, 41%);
-    background-color: rgb(222, 212, 212);
+    background-color: rgb(244, 235, 235);
 }
 
 .pricing #p2{
