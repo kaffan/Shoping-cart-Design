@@ -5,6 +5,7 @@ const headListItem = document.querySelector('.list_item');
 const HeadEnd = document.querySelector('.hd_end');
 const usrCart = document.querySelector('.hd_end .usr_cart')
 const menu = document.querySelector('.menuBtn');
+const mobileMenu = document.querySelector('#mobMenuList');
 
 // Application Architecture
 
@@ -28,12 +29,18 @@ class App{
             if (e.currentTarget.innerWidth <= 744) {
                 headListItem.style.display = "none";
                 menu.style.display = "block";
+                App.MenuBtnClick(menu);
             }
             else if (e.currentTarget.innerWidth > 744) {
                 headListItem.style.display = "flex";
                 menu.style.display = "none";
             }
         });
+    }
+    static MenuBtnClick(obj){
+        obj.addEventListener('click',(e) => {
+            mobileMenu.style.display = 'fixed';
+        })
     }
 }
 
